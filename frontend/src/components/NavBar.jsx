@@ -13,6 +13,7 @@ const NavBar = () => {
 
   return (
     <nav className="nav-bar">
+      
       <Link to="/">
         <h2>FerShop</h2>
       </Link>
@@ -37,16 +38,16 @@ const NavBar = () => {
         <Links>
           {auth.isAdmin ? (
             <div>
-              <Link to="/admin/resumen">Panel Admin</Link>
+              <Link to="/admin/resumen">Panel de Administrador</Link>
             </div>
           ) : null}
           <div
             onClick={() => {
               dispatch(logoutUser(null));
-              toast.warning("Cerraste cesion!", { position: "bottom-left" });
+              toast.warning("Cerraste Sesion!", { position: "bottom-left" });
             }}
           >
-            Logout
+            Cerrar Sesión
           </div>
         </Links>
       ) : (

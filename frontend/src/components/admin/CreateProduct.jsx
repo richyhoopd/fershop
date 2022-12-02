@@ -94,7 +94,7 @@ const CreateProduct = () => {
         />
 
         <PrimaryButton type="submit">
-          {createStatus === "pending" ? "Subiendo" : "Subidos!"}
+          {createStatus === "pending" ? "Subiendo" : "Crear producto!"}
         </PrimaryButton>
       </StyledForm>
       <ImagePreview>
