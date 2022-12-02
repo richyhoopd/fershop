@@ -26,10 +26,7 @@ app.use("/api/orders", orders);
 app.use("/api/stripe", stripe);
 app.use("/api/products", productsRoute);
 
-app.use(express.static(path.join(__dirname, '/frontend/build')));
-app.get('*', (req, res) =>
-    res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
-);
+app.use(express.static(path.join(__dirname + "/public")));
 
 app.get("/", (req, res) => {
   res.send("Welcome our to online shop API...");
